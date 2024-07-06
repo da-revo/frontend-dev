@@ -12,10 +12,10 @@
 
 <body>
 
-    <header>
+    <header class="brown">
         <nav>
             <h1 class="cool-font">
-                <img class="profile-picture"
+                <img class="logo"
                     src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
                     alt="coffee_masters_logo" />
                 Coffee Masters
@@ -24,34 +24,57 @@
     </header>
 
     <main>
-        <section class="card">
-            <h2>Items</h2>
-            <ul>
-                <li>
-                    <div class="item">
-                        <span>1x</span> <span>Cappuccino</span> <span>$3.35</span>
-                        <ul>
-                            <li>Lite Foam</li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </section>
+        <div class="main-row">
 
-        <section>
-            <form>
-                <div class="cool-group card">
-                    <label for="name-field" class="cool-label">Name</label>
-                    <input id="name-field" class="cool-input" placeholder="Ford Perfect" />
-                </div>
-                <div class="cool-group card">
-                    <label for="card-num-field">Card Number</label>
-                    <input id="card-num-field" type="text" placeholder="1234 5678 9012 3456" />
-                    <label for="cvv-field">CVV Number</label>
-                    <input id="cvv-field" type="password" placeholder="001" />
-                </div>
-            </form>
-        </section>
+            <section class="items-box card">
+                <h2>Items</h2>
+                <ul>
+                    <li>
+                        <div class="item">
+                            <span>1x</span> <span>Cappuccino</span> <span>$3.35</span>
+                            <ul>
+                                <li>Lite Foam</li>
+                            </ul>
+                            <hr>
+                            <span>1x</span> <span>Cappuccino</span> <span>$3.85</span>
+                            <ul>
+                                <li>Lite milk</li>
+                                <li>Double Espresso</li>
+                            </ul>
+                            <hr>
+                            <span>1x</span> <span>Croissant</span> <span>$2.45</span>
+                            <ul>
+                                <li>Butter</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="customer-box">
+                <form>
+                    <div class="card">
+                        <h2>Name</h2>
+                        <div class="field-group  card">
+                            <label for="name-field" class="cool-label">Name for order</label>
+                            <input id="name-field" class="cool-input" placeholder="Ford Perfect" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Payment</h2>
+                        <div class="field-group ">
+                            <label for="card-num-field" class="cool-label">Card Number</label>
+                            <input id="card-num-field" class="cool-input" type="text"
+                                placeholder="1234 5678 9012 3456" />
+                        </div>
+                        <div class="field-group ">
+                            <label for="cvv-field" class="cool-label">CVV Number</label>
+                            <input id="cvv-field" class="cool-input" type="password" placeholder="001" />
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
 
 
         <section>

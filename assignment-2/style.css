@@ -1,9 +1,12 @@
 * {
     box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
 }
 
-.cool-font {
+h1 {
     font-family: 'Open Sans', sans-serif;
+    color: rgba(230, 219, 174, 255);
 }
 
 .field-group {
@@ -12,14 +15,14 @@
 }
 
 .cool-input {
-    border-color: crimson;
+    border-color: rgba(165, 129, 95, 255);
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .cool-label {
     background-color: white;
-    color: crimson;
+    color: rgba(165, 129, 95, 255);
     font-size: 11px;
     position: absolute;
     left: 25px;
@@ -32,7 +35,7 @@ ul {
 }
 
 h2 {
-    color: brown;
+    color: rgba(165, 129, 95, 255);
     /* font-size: 12px; */
     font-weight: normal;
     /* text-decoration: underline; */
@@ -40,12 +43,16 @@ h2 {
     /* border: 3px solid pink; */
 }
 
+hr {
+    border-color: rgba(165, 129, 95, 255);
+    width: 95%;
+}
+
 .items-box {
     /* border: 3px solid #aaa; */
     background-color: yellow;
     display: flex;
     width: 100%;
-    /* float: left; */
     /* height: 200px;
     width: 200px;
     align-items: center;
@@ -69,7 +76,7 @@ h2 {
 }
 
 .brown {
-    background-color: saddlebrown;
+    background-color: rgb(72, 41, 23);
 }
 
 .main-row {
@@ -83,8 +90,16 @@ body {
 
 button {
     border-radius: 5px;
+    border: 0px;
+    background-color: rgba(222, 185, 147, 255);
 }
 
 .card {
     box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(222, 185, 147, 255);
+    border-radius: 5px;
+}
+
+.bold {
+    font-weight: bold;
 }

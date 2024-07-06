@@ -1,0 +1,24 @@
+.cool-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cool-group {
+    position: relative;
+    display: inline-block;
+}
+
+.cool-input {
+    border-color: crimson;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.cool-label {
+    background-color: white;
+    color: crimson;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}

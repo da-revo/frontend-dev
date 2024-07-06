@@ -5,62 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Masters</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
 </head>
 
 <body>
 
-    <img class="profile-picture"
-        src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
-        alt="coffee_masters_logo" />
-    <h1>Coffee Masters</h1>
+    <header>
+        <nav>
+            <h1 class="cool-font">
+                <img class="profile-picture"
+                    src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
+                    alt="coffee_masters_logo" />
+                Coffee Masters
+            </h1>
+        </nav>
+    </header>
 
-    <div>
-        <h2>Items</h2>
-        <ul>
-            <li>
-                <div class="item">
-                    <p>1x</p>
-                    <p>Cappuccino</p>
-                    <p>$3.35</p>
-                    <ul>
-                        <li>Lite Foam</li>
-                    </ul>
+    <main>
+        <section class="card">
+            <h2>Items</h2>
+            <ul>
+                <li>
+                    <div class="item">
+                        <span>1x</span> <span>Cappuccino</span> <span>$3.35</span>
+                        <ul>
+                            <li>Lite Foam</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <form>
+                <div class="cool-group card">
+                    <label for="name-field" class="cool-label">Name</label>
+                    <input id="name-field" class="cool-input" placeholder="Ford Perfect" />
                 </div>
-            </li>
-        </ul>
-    </div>
+                <div class="cool-group card">
+                    <label for="card-num-field">Card Number</label>
+                    <input id="card-num-field" type="text" placeholder="1234 5678 9012 3456" />
+                    <label for="cvv-field">CVV Number</label>
+                    <input id="cvv-field" type="password" placeholder="001" />
+                </div>
+            </form>
+        </section>
 
 
-    <form>
-        <div>
-            <label for="name-field">Name</label>
-            <input id="name-field" placeholder="Ford Perfect" />
-        </div>
+        <section>
+            <p>Subtotal: <span>$9.65</span> </p>
+            <p>Tax: <span>$0.82</span> </p>
+            <p>Total: <span>$10.47</span> </p>
+        </section>
 
-        <div>
-            <label for="card-num-field">Card Number</label>
-            <input id="card-num-field" type="text" placeholder="1234 5678 9012 3456" />
-            <label for="cvv-field">CVV Number</label>
-            <input id="cvv-field" type="password" placeholder="001" />
-        </div>
-    </form>
-
-
-
-
-    <div>
-        <p>Subtotal:</p>
-        <p>$9.65</p>
-        <p>Tax:</p>
-        <p>$0.82</p>
-        <p>Total:</p>
-        <p>$10.47</p>
-    </div>
-
-
-    <button type="submit">
-        Place Order
-    </button>
+        <button type="submit">
+            Place Order
+        </button>
+    </main>
 
 
 </body>

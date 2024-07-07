@@ -12,37 +12,39 @@
 <body>
 
     <header>
-        <h1 class="text-3xl font-bold underline text-red-800">
-            Hello world!
+        <h1 class="text-3xl font-bold underline text-red-800 ">
+            Calculator Masters
         </h1>
     </header>
 
     <main>
         <section class="grid grid-cols-4  my-20 text-4xl">
-            <div class="bg-black col-span-4 text-white"> 0 </div>
+            <div class="screen col-span-4 h-20 text-right leading-[5rem] px-2 bg-black text-white"> 0 </div>
 
-            <button class="col-span-2 bg-gray-300  border-solid border-e-2 border-b-2 border-black"> c
+            <button class="button-clear col-span-2 bg-gray-300  border-solid border-e-2 border-b-2 border-black"> C
             </button>
             <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> ← </button>
-            <button class="bg-orange-400 border-solid border-s-2 border-b-2 border-black"> ÷ </button>
+            <button class="button-divide h-20 bg-orange-400 border-solid border-s-2 border-b-2 border-black"> ÷
+            </button>
 
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 7 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 8 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 9 </button>
-            <button class="bg-orange-400 border-solid border-s-2 border-b-2 border-black"> x </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 7 </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 8 </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 9 </button>
+            <button class="button-multiply h-20 bg-orange-400 border-solid border-s-2 border-b-2 border-black"> ×
+            </button>
 
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 4 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 5 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 6 </button>
-            <button class="bg-orange-400 border-solid border-s-2 border-b-2 border-black"> - </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 4 </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 5 </button>
+            <button class="button-digit bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 6 </button>
+            <button class="button-minus h-20 bg-orange-400 border-solid border-s-2 border-b-2 border-black"> - </button>
 
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 1 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 2 </button>
-            <button class="bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 3 </button>
-            <button class="bg-orange-400 border-solid border-s-2 border-b-2 border-black"> + </button>
+            <button class="button-1 bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 1 </button>
+            <button class="button-2 bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 2 </button>
+            <button class="button-3 bg-gray-300 border-solid border-e-2 border-b-2 border-black"> 3 </button>
+            <button class="button-plus h-20 bg-orange-400 border-solid border-s-2 border-b-2 border-black"> + </button>
 
-            <button class="col-span-3 bg-gray-300  border-solid border-e-2  border-black"> 0 </button>
-            <button class="bg-orange-400 border-solid border-s-2  border-black"> = </button>
+            <button class="button-digit col-span-3 bg-gray-300  border-solid border-e-2  border-black"> 0 </button>
+            <button class="button-equals h-20 bg-orange-400 border-solid border-s-2  border-black"> = </button>
         </section>
     </main>
 
@@ -50,6 +52,7 @@
         <p class="text-xs">Cyril Joy Mangalan 2024</p>
     </footer>
 
+    <script src="./yava.js"></script>
 </body>
 
 </html>

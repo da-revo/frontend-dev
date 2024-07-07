@@ -9,16 +9,20 @@ let op = "+"
 
 let opToggled = false
 
-function calculate(a, b, op) {
+function calculate(op) {
     switch (op) {
         case "+":
-            return a + b
+            a += b
+            break;
         case "-":
-            return a - b
+            a -= b
+            break;
         case "×":
-            return a * b
+            a *= b
+            break;
         case "÷":
-            return a / b
+            a /= b
+            break;
         default:
             return a
     }
@@ -26,12 +30,16 @@ function calculate(a, b, op) {
 
 function output(x) {
     screen.innerText = x
-    a = x
     return x
 }
 
 
 /// special buttons
+
+// for debugging, click on the screen
+screen.addEventListener("click", function () {
+    console.log(`a:${a} b:${b} op:${op}`)
+});
 
 const buttonClear = document.querySelector(".button-clear");
 buttonClear.addEventListener("click", function () {
@@ -41,10 +49,33 @@ buttonClear.addEventListener("click", function () {
     opToggled = false
 });
 
+const buttonBack = document.querySelector(".button-back");
+buttonBack.addEventListener("click", function () {
+    x = parseInt(screen.innerText)
+
+    if (x < 10) {
+        x = 0
+    } else {
+        x = Math.floor(x / 10)
+    }
+
+    if (!opToggled) {
+        a = x
+    } else {
+        b = x
+    }
+
+    output(x)
+});
+
 const buttonEquals = document.querySelector(".button-equals");
 buttonEquals.addEventListener("click", function () {
-    console.log(output(calculate(a, b, op)))
+    calculate(op)
+    console.log(output(a))
+    b = 0
+    opToggled = false
 });
+
 
 /// operations
 
@@ -78,56 +109,20 @@ buttonDivide.addEventListener("click", function () {
 
 
 /// digits
-const button1 = document.querySelector(".button-1");
-button1.addEventListener("click", function () {
-    v = 1
-    if (!opToggled) {
-        a = v;
-    } else {
-        b = v;
-        opToggled = false
+const digitButtons = document.querySelectorAll(".button-digit");
+digitButtons.forEach(
+    button => {
+        button.addEventListener("click", function (event) {
+            v = parseInt(event.target.innerText)
+            out = v
+            if (!opToggled) {
+                a = a * 10 + v
+                out = a
+            } else {
+                b = b * 10 + v
+                out = b
+            }
+            output(out)
+        });
     }
-    output(v)
-});
-
-
-const button2 = document.querySelector(".button-2");
-button2.addEventListener("click", function () {
-    v = 2
-    if (!opToggled) {
-        a = v;
-    } else {
-        b = v;
-        opToggled = false
-    }
-    output(v)
-});
-
-const button3 = document.querySelector(".button-3");
-button3.addEventListener("click", function () {
-    v = 3
-    if (!opToggled) {
-        a = v;
-    } else {
-        b = v;
-        opToggled = false
-    }
-    output(v)
-});
-
-
-
-// const button1 = document.querySelectorAll(".button-digit");
-// button1.addEventListener("click", function () {
-//     v = 1
-//     // v = parseInt(event.target.innerText)
-//     // console.log(event.target)
-//     // console.log("hi")
-//     if (!opToggled) {
-//         a = v;
-//     } else {
-//         b = v;
-//         opToggled = false
-//     }
-//     output(v)
-// });
+);

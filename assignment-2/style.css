@@ -21,7 +21,7 @@ h1 {
 }
 
 .cool-label {
-    background-color: white;
+    background-color: rgb(227, 207, 186);
     color: rgba(165, 129, 95, 255);
     font-size: 11px;
     position: absolute;
@@ -30,8 +30,9 @@ h1 {
     padding: 0 2px;
 }
 
-ul {
-    list-style: none;
+h1 {
+    margin: 0;
+    padding: 10px;
 }
 
 h2 {
@@ -48,23 +49,27 @@ hr {
     width: 95%;
 }
 
-.items-box {
-    /* border: 3px solid #aaa; */
-    background-color: yellow;
+ul {
+    list-style: none;
+    margin-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav {
     display: flex;
-    width: 100%;
-    /* height: 200px;
-    width: 200px;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    border-radius: 5px;
-    font-size: 30px; */
+}
+
+.items-box {
+    display: flex;
+    width: 100%;
 }
 
 .customer-box {
-    background-color: teal;
     display: flex;
+    flex-direction: column;
     width: 100%;
     /* clear: right; */
 }
@@ -73,6 +78,8 @@ hr {
     display: inline;
     height: 30px;
     width: 30px;
+    position: relative;
+    top: 5px;
 }
 
 .brown {
@@ -82,10 +89,13 @@ hr {
 .main-row {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 body {
     background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -95,11 +105,45 @@ button {
 }
 
 .card {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
     box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
-    background-color: rgba(222, 185, 147, 255);
+    background-color: rgb(227, 207, 186);
     border-radius: 5px;
+    margin-bottom: 10px;
 }
+
 
 .bold {
     font-weight: bold;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+        "count  item-name   cost"
+        "count  options     cost";
+}
+
+.count {
+    grid-area: count;
+    padding: 10px;
+}
+
+.item-name {
+    grid-area: item-name;
+    padding: 10px;
+}
+
+.cost {
+    grid-area: cost;
+    padding: 10px;
+}
+
+.options {
+    grid-area: options;
+    padding: 10px;
 }

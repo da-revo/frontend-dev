@@ -18,6 +18,7 @@ h1 {
     border-color: rgba(165, 129, 95, 255);
     padding: 8px;
     border-radius: 50px;
+    background-color: rgb(227, 207, 186);
 }
 
 .cool-label {
@@ -126,6 +127,8 @@ button {
     grid-template-areas:
         "count  item-name   cost"
         "count  options     cost";
+    /* padding: 10px 0; */
+    /* row-gap: 0px; */
 }
 
 .count {

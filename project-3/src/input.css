@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinny-boi {
+    animation: spin 1.5s infinite linear;
+    display: inline-block;
+    font-size: 30px;
+}
